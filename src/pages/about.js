@@ -5,6 +5,8 @@ import {React,useEffect, useRef, useState} from 'react';
 import Image from 'next/image';
 import Profile from '../../public/images/profile/myimage.png';
 import { motion, useAnimation, useInView, useMotionValue, useSpring } from "framer-motion";
+import HireMe from '@/component/HireMe';
+import Skills from '@/component/Skills';
 
 const NumberAnimation = ({number}) => {
   const ref =useRef(null); // for making a refrence type (similar to pointer)
@@ -61,6 +63,7 @@ const about = () => {
             <div className=' basis-2/5 flex  p-4 rounded-2xl border-2 border-solid border-dark'>
               <div className=''>
               <Image src={Profile} className="w-full h-max rounded-2xl"></Image>
+              
               </div>
             </div>
             <div className='basis-1/5 flex flex-col items-center justify-around p-4'>
@@ -78,6 +81,8 @@ const about = () => {
               </div>
             </div>
           </div>
+
+          <Skills />
         </Layout>
       </main>
     </>
